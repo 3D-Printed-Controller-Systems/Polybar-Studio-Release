@@ -1,8 +1,8 @@
 # Polybar Studio
 
-Paint your Polybar Micro, Mini or Max, then get print-ready plates for a Bambu P1S.
+Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.3.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.3.1-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases)
 
@@ -31,7 +31,7 @@ Under **Choose Your Build!**, pick **Micro**, **Mini** or **Max**.
 
 - **Micro** has no frame.
 - **Mini** and **Max** have a **Frame style** list (Airbourne, Diablo, Maverick, Nomad, Offset, Pioneer, Renegade, Vampire, Wizard; Max also has the older Enforcer). Choose **No frame** for the bare controller.
-- **Max** frames come with their matching headstock.
+- **Max** frames come with their matching headstock. On a **Mini** with a frame, tick **Add the matching Max headstock** if you want one (it's sized for the Max, so it's off by default).
 - **Edit part set** switches the preview between the assembled guitar, the frame only, and (Max) the headstock.
 
 Drag in the preview to rotate, scroll to zoom, right-drag to pan. **Front / reset**, **Angled** and **Back** jump to a view.
@@ -41,6 +41,7 @@ Drag in the preview to rotate, scroll to zoom, right-drag to pan. **Front / rese
 - Drop images onto **Add image layers**, or click it to browse. SVG (up to 5 MB), PNG, JPG and WebP (up to 15 MB) work; you can stack up to 12 layers.
 - Click an image on the model to select it, then drag it into place. **Size** and **Rotation** sliders, **Center** and **Fit image** are under **Image layers**; **Done** finishes editing. Click outside the image to go back to rotating the model.
 - **Image background › Remove background** takes out a solid background around a logo. Raise **Tolerance** if some background stays.
+- A one-color image (a typical logo) gets a small **color dot** in its row under **Image layers**: click it to recolor the whole image.
 - No image? Open **Studio patterns** for Waves, Checkers, Voltage or Orbit. **Keep pattern behind image layers** puts a pattern under your images.
 
 ### 3. Pick your colors
@@ -54,7 +55,7 @@ Drag in the preview to rotate, scroll to zoom, right-drag to pan. **Front / rese
 Choose how the five fret windows, two action buttons and the strum bar are printed:
 
 - **Colored:** painted with the artwork like everything else.
-- **Clear** or **Tinted clear:** printed in clear filament. This is an extra material on top of your color limit, and the fret color chips stay colored.
+- **Clear** or **Tinted clear:** the windows, stop plates, action buttons and strum bar print in clear PETG (PETG Translucent). This is an extra material on top of your color limit, and the fret color chips stay colored.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/assets/clear-dark.png">
@@ -78,7 +79,8 @@ Choose how the five fret windows, two action buttons and the strum bar are print
 
 Click **Export print plates**.
 
-- **Export type:** *P1S print plates · ZIP bundle* (the whole guitar) or a *60 × 32 mm color test tile* (a quick way to check your colors first).
+- **Export type:** *Print plates · ZIP bundle* (the whole guitar) or a *60 × 32 mm color test tile* (a quick way to check your colors first).
+- **Printer:** every Bambu Lab printer (A1, A1 mini, A2L, H2C, H2D, H2D Pro, H2S, P1P, P1S, P2S, X1, X1 Carbon, X1E, X2D). The project uses Bambu's own profiles for that printer and the nozzle chosen under Printability. If a piece is too big for the printer (a Micro housing on an A1 mini), the export says so.
 - **Which pieces?** Everything, only the colored pieces, only the clear pieces, or pieces you tick yourself.
 - Click **Prepare export**, wait for **Ready**, then **Save…** and choose where to put it.
 
@@ -93,7 +95,7 @@ Click **Export print plates**.
 
 Unzip the bundle. It contains:
 
-- `Polybar-Bambu-P1S.3mf`: open this in **Bambu Studio** as a project. Every piece is already turned the way it prints (show side down on the textured plate) and grouped onto plates, with clear pieces on their own plates and at most four colors per plate.
+- `Polybar-<printer>.3mf` (for example `Polybar-P2S.3mf`): open this in **Bambu Studio**. It's a complete project: plates are named (Housing Shells - Top, Transparent Input Parts, Assembly Parts, one plate per frame wing and faceplate…) and arranged, matching parts are grouped (the five windows are one object), every piece is turned the way it prints (show side down on the textured plate), clear pieces are on their own plates, and each plate uses at most four colors with its prime-tower corner kept free. Press **A** (Arrange) if you want Bambu to re-arrange a plate.
 - `Individual-plates/`: one file per plate, for OrcaSlicer, PrusaSlicer or printing one plate at a time.
 - `Plate-manifest.json` and `README.txt`: what's on each plate.
 
@@ -103,10 +105,12 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 
 - **Designs aren't saved** between sessions. Export (or save the PNG) before closing the app.
 - **Enforcer** can be previewed and painted, but can't be exported as print plates yet.
-- Imports into Bambu Studio, OrcaSlicer and PrusaSlicer haven't been fully tested yet. Please report anything that comes in wrong (wrong color, a piece upside down, a piece off the plate).
+- Exports have been sliced with Bambu Studio's command line (all plates, painted colors intact). Please report anything that looks wrong when you open one (a wrong color, a piece upside down, an odd layout).
 
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.3.1**: exports open and slice in Bambu Studio (0.3.0's crashed it); choose any Bambu Lab printer; named, arranged plates like the team's own projects; clear stop plates; color dot to recolor one-color images; optional Max headstock on a Mini; the 3D model now follows palette color changes.
 
 **0.3.0** (first Windows release): the desktop app, rebuilt from the earlier browser preview. Installer about 50 MB.
