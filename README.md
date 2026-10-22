@@ -2,9 +2,9 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.4.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.5.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
-Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases)
+Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
 This repository is private: the download works when you're signed in to GitHub with an account that has access.
 
@@ -44,6 +44,7 @@ Drag in the preview to rotate, scroll to zoom, right-drag to pan. **Front / rese
 - **Keyboard** (while an image is selected): arrows move it; **Ctrl + ↑ / ↓** or **+ / −** resize; **Ctrl + ← / →** or **[ ]** rotate; hold **Shift** for bigger steps; **Ctrl + D** duplicates; **Delete** removes; **Esc** deselects.
 - Each layer shows a small preview. **⧉** duplicates a layer, **×** removes it.
 - **Repeat across the guitar** (under the selected image) tiles it as a pattern: set the spacing, and optionally offset every other row. Dragging any copy moves them all.
+- **◆ Add shape** adds a circle, ring, square, triangle, diamond, hexagon, star, burst, heart, lightning bolt, arrow or music note. **T Add text** adds text: type it under the selected layer and pick a font and Bold. Shapes and text are one color: recolor them with their color dot.
 - **Image background › Remove background** takes out a solid background around a logo. Raise **Tolerance** if some background stays.
 - A one-color image (a typical logo) gets a small **color dot** in its row under **Image layers**: click it to recolor the whole image.
 - **Name your design:** click the title above the preview (for example "Mini / Plain") and type. The name is used for the export files.
@@ -110,15 +111,28 @@ Unzip the bundle. It contains:
 
 In the slicer, pick your actual filament profiles, check that each color goes to the right AMS slot, and look over the sliced preview before printing.
 
+## Save, open and share designs
+
+- **Save** (Ctrl + S) saves your design as a `.polybar` file: the build, colors, print settings and every layer. **Ctrl + Shift + S** saves a copy under a new name. **Open…** (Ctrl + O) opens one; **Recent ▾** lists the designs you used lately. Double-clicking a `.polybar` file in Explorer opens it too.
+- Polybar Studio also keeps your work every 30 seconds. If it closes unexpectedly, choose **Restore it** the next time it opens.
+- **Share…** makes a picture of your design (turn the model first for a different angle). **Copy picture** and paste it into your post, and **Save design file…** to attach the `.polybar` file so others can open, change and print it. **Polybar Discord ↗** takes you to the community ([discord.gg/wBRdgxEGhe](https://discord.gg/wBRdgxEGhe)); the same link is at the bottom of the window.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/share-dark.png">
+  <img alt="The Share dialog with a picture of the design" src=".github/assets/share-light.png">
+</picture>
+
 ## Good to know
 
-- **Designs aren't saved** between sessions. Export (or save the PNG) before closing the app.
+- **Updates:** when a new version is out, Polybar Studio asks to install it (your design is kept). Tick **Install updates automatically when Polybar Studio starts** to skip the question, or use **Check for updates** at the bottom of the window. Updates are signed, so the app only installs genuine ones.
 - **Enforcer** can be previewed and painted, but can't be exported as print plates yet.
 - Exports have been sliced with Bambu Studio's command line (all plates, painted colors intact). Please report anything that looks wrong when you open one (a wrong color, a piece upside down, an odd layout).
 
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.5.0**: save and open designs (`.polybar` files, Recent, autosave and Restore, double-click to open); Share (a picture and the design file) and the Polybar Discord link; shapes and text; updates from inside the app.
 
 **0.4.0**: printable-width guarantee with a "print at your own risk" warning; single-color frets; Bambu spool color presets; typed values, keyboard shortcuts, layer previews, duplicate and repeat for images; rename your design; the color plates, power slider and pivot pins in the export; "Tinted clear" removed.
 
