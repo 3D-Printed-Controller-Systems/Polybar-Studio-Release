@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.3.2-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.4.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases)
 
@@ -40,23 +40,29 @@ Drag in the preview to rotate, scroll to zoom, right-drag to pan. **Front / rese
 ### 2. Add your artwork
 
 - Drop images onto **Add image layers**, or click it to browse. SVG (up to 5 MB), PNG, JPG and WebP (up to 15 MB) work; you can stack up to 12 layers.
-- Click an image on the model to select it, then drag it into place. **Size** and **Rotation** sliders, **Center** and **Fit image** are under **Image layers**; **Done** finishes editing. Click outside the image to go back to rotating the model.
+- Click an image on the model to select it, then drag it into place. Clicking anywhere inside a selected image's box keeps it selected. **Size** and **Rotation** have sliders and number boxes you can type in; **Center**, **Fit image** and **Done** are below them. Click away from the image to go back to rotating the model.
+- **Keyboard** (while an image is selected): arrows move it; **Ctrl + ↑ / ↓** or **+ / −** resize; **Ctrl + ← / →** or **[ ]** rotate; hold **Shift** for bigger steps; **Ctrl + D** duplicates; **Delete** removes; **Esc** deselects.
+- Each layer shows a small preview. **⧉** duplicates a layer, **×** removes it.
+- **Repeat across the guitar** (under the selected image) tiles it as a pattern: set the spacing, and optionally offset every other row. Dragging any copy moves them all.
 - **Image background › Remove background** takes out a solid background around a logo. Raise **Tolerance** if some background stays.
 - A one-color image (a typical logo) gets a small **color dot** in its row under **Image layers**: click it to recolor the whole image.
+- **Name your design:** click the title above the preview (for example "Mini / Plain") and type. The name is used for the export files.
 - No image? Open **Studio patterns** for Waves, Checkers, Voltage or Orbit. **Keep pattern behind image layers** puts a pattern under your images.
 
 ### 3. Pick your colors
 
 - **Color limit** is how many filaments you'll use: 4, 8, 12, or a custom number. The artwork is reduced to fit, and the housing base color counts as one of them.
-- **Filament palette** shows each color and how much of the artwork uses it. Click a swatch to change it to the exact filament color you own. **Auto colors** rebuilds the palette from the artwork.
+- **Filament palette** shows each color and how much of the artwork uses it. Click a swatch to pick from Bambu Lab's own **PLA Basic** and **PLA Matte** spool colors, or choose **Custom color…**. **Auto colors** rebuilds the palette from the artwork.
 - **BASE** is the housing's bottom and lower surfaces (gray by default).
 
 ### 4. Action Button Color
 
-Choose how the five fret windows, two action buttons and the strum bar are printed:
+Choose how the fret windows, stop plates, action buttons and strum bar are printed:
 
 - **Colored:** painted with the artwork like everything else.
-- **Clear** or **Tinted clear:** the windows, stop plates, action buttons and strum bar print in clear PETG (PETG Translucent). This is an extra material on top of your color limit, and the fret color chips stay colored.
+- **Clear:** they print in clear PETG (PETG Translucent). This is an extra material on top of your color limit.
+
+**Paint the fret buttons** (on by default) paints the five frets with the artwork. Turn it off for frets in one solid color you pick (a smoother surface to press); that color counts toward your color limit.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/assets/clear-dark.png">
@@ -68,7 +74,8 @@ Choose how the five fret windows, two action buttons and the strum bar are print
 ### 5. Check printability
 
 - Set **Nozzle size** to the nozzle you print with (0.4 mm is standard).
-- Leave **Optimize artwork for printing** on: it thickens lines that are too thin to print and removes tiny specks. **Adjustment strength** sets how much (Gentle keeps more detail, Strong simplifies more).
+- Leave **Optimize artwork for printing** on: it makes sure every color is at least a printable width everywhere, thickening thin lines and clearing hairline gaps and specks. **Adjustment strength** sets that width: Gentle 1.5×, Balanced 2× and Strong 2.5× the nozzle (0.6 / 0.8 / 1.0 mm on a 0.4 mm nozzle). The status line says "Every color at least … mm wide ✓", or how much is still thinner.
+- Exporting with optimization off, or with anything still too thin, shows **Print at your own risk**: tick "I understand…" to continue.
 - **Show unadjusted artwork** compares before and after. **Print sample** (above the preview) shows the artwork flat, as printed.
 
 <picture>
@@ -83,6 +90,7 @@ Click **Export print plates**.
 - **Export type:** *Print plates · ZIP bundle* (the whole guitar) or a *60 × 32 mm color test tile* (a quick way to check your colors first).
 - **Printer:** every Bambu Lab printer (A1, A1 mini, A2L, H2C, H2D, H2D Pro, H2S, P1P, P1S, P2S, X1, X1 Carbon, X1E, X2D). The project uses Bambu's own profiles for that printer and the nozzle chosen under Printability. If a piece is too big for the printer (a Micro housing on an A1 mini), the export says so.
 - **Which pieces?** Everything, only the colored pieces, only the clear pieces, or pieces you tick yourself.
+- **Include the assembly parts** (on by default) adds the color plates, power slider and pivot pins (and on a Micro the PCB braces) in the housing base color.
 - Click **Prepare export**, wait for **Ready**, then **Save…** and choose where to put it.
 
 <picture>
@@ -111,6 +119,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.4.0**: printable-width guarantee with a "print at your own risk" warning; single-color frets; Bambu spool color presets; typed values, keyboard shortcuts, layer previews, duplicate and repeat for images; rename your design; the color plates, power slider and pivot pins in the export; "Tinted clear" removed.
 
 **0.3.2**: exports for dual-nozzle printers (H2D, H2D Pro, H2C, X2D) now slice (0.3.1's failed); half-length extension for any Mini or Max.
 
