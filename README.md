@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.7.2-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.7.3-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -33,7 +33,7 @@ Under **Choose your build**, pick **Micro**, **Mini** or **Max**.
 - **Headstock:** a Max frame comes with its matching headstock. Any Mini or Max can take any family's headstock from the **Headstock** list (on a Mini it's off by default: it's sized for the Max).
 - **Part set** switches the preview between the assembled guitar, the frame only, and the headstock. Your artwork stays in the same place in every view. In **Frame only**, the housing is drawn see-through blue: artwork stops where it covers the frame, because that part is hidden on the finished guitar.
 
-Drag in the preview to rotate, scroll to zoom, right-drag to pan. **Front**, **Angled** and **Back** jump to a view.
+Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer), right-drag to pan. Right-drag pans even while an image is selected, so you can zoom in on a horn or the headstock and move around while you place artwork. **Front**, **Angled** and **Back** jump to a view.
 
 ### 2. Add your artwork
 
@@ -72,7 +72,11 @@ Choose how the fret windows, stop plates, action buttons and strum bar are print
 
 ### LED light
 
-Light colors on the fret and strum housings let the LEDs shine through. Turn on **Block LED light** (right side, under Action button color) and those two housings keep their first 3 mm (the show side) in your colors and print everything above it in your palette's darkest color. That color is already one of your filaments, so it needs no extra AMS slot. The sides of those housings show that color above 3 mm.
+Light colors on the fret and strum housings let the LEDs shine through. Turn on **Block LED light** (right side, under Action button color) and the last part of those housings' 4 mm shell, plus the walls above it, print in your palette's darkest color; the show side in front of it stays in your colors. That color is already one of your filaments, so it needs no extra AMS slot.
+
+- **Dark layer** (slider or type a value) sets how thick that dark part is: 1.6 mm by default, in whole layers for your nozzle ("1.6 mm · 8 layers" on a 0.4 mm nozzle). At least 1 mm of your colors always stays in front.
+- A warning line appears under it when the layer may be **too thin to block all LED light** (under about 0.6 mm for black, about 1.2 mm for other dark colors like dark blue or brown), or when so little of your colors is left that they **may look darker** (under about 1.4 mm). These are starting estimates, not measurements yet. The export checklist repeats them.
+- To see for yourself, export the **LED test tile** (Export type in the Export dialog): a strip of your lightest color over your darkest at five dark thicknesses (0.4 to 2.0 mm), each labeled on the back. Print it and hold it over a lit fret LED.
 
 It's off by default. When you export with light colors on those housings and a dark color in your palette, Polybar Studio asks whether to turn it on. If your palette has no dark color (all pastels, say), there's nothing to block with and the switch stays off.
 
@@ -92,7 +96,7 @@ It's off by default. When you export with light colors on those housings and a d
 
 Click **Export print plates**.
 
-- **Export type:** *Print plates · ZIP bundle* (the whole guitar) or a *60 × 32 mm color test tile* (a quick way to check your colors first).
+- **Export type:** *Print plates · ZIP bundle* (the whole guitar), a *60 × 32 mm color test tile* (a quick way to check your colors first), or the *LED test tile* (see LED light above).
 - **Printer:** every Bambu Lab printer (A1, A1 mini, A2L, H2C, H2D, H2D Pro, H2S, P1P, P1S, P2S, X1, X1 Carbon, X1E, X2D). The project uses Bambu's own profiles for that printer and the nozzle chosen under Printability. If a piece is too big for the printer (a Micro housing on an A1 mini), the export says so.
 - **Which pieces?** Everything, only the colored pieces, only the clear pieces, or pieces you tick yourself.
 - **Include the assembly parts** (on by default) adds the color plates, power slider and pivot pins (and on a Micro the PCB braces) in the housing base color.
@@ -135,6 +139,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.7.3**: right-drag pans in every mode and zoom goes toward the mouse pointer; an adjustable **Dark layer** for Block LED light (1.6 mm by default), with warnings and an LED test tile.
 
 **0.7.2**: the printer and export type can be changed again in the Export dialog; artwork stays put when you switch between Assembled guitar, Frame only and the headstock; the housing shows see-through in Frame only; new shapes, text and images start on the body; update checks while the app is open, with an update bar.
 
