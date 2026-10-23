@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.8.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.9.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -37,6 +37,13 @@ Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer
 
 ### 2. Add your artwork
 
+- **Start from an example:** click **Examples…** (above the preview) for Sakura, Deep Space, Starry Swirl, Mountain River or Synthwave Sunset. Each one is drawn for the build and frame you chose (Mini or Max), with its main pieces on the body and headstock, in four Bambu spool colors and with every line wide enough to print. It replaces your artwork; everything else stays. Change any of its four layers or colors afterwards.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/examples-dark.png">
+  <img alt="The Examples sheet with five designs drawn for a Max with the Pioneer frame" src=".github/assets/examples-light.png">
+</picture>
+
 - Drop images onto **Add images**, or click it to browse. New images, shapes and text start on the largest open area of the body. SVG (up to 5 MB), PNG, JPG and WebP (up to 15 MB) work; you can stack up to 12 layers.
 - Click an image on the model to select it, then drag it into place. Clicking anywhere inside a selected image's box keeps it selected. **Size** and **Rotation** have sliders and number boxes you can type in; **Center**, **Fit** and **Done** are below them. Click away from the image to go back to rotating the model.
 - **Keyboard** (while an image is selected): arrows move it; **Ctrl + ↑ / ↓** or **+ / −** resize; **Ctrl + ← / →** or **[ ]** rotate; hold **Shift** for bigger steps; **Ctrl + D** duplicates; **Delete** removes; **Esc** deselects.
@@ -58,7 +65,7 @@ Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer
 
 **Clear action parts** (a switch) prints the fret windows, stop plates, action buttons and strum bar in clear PETG (PETG Translucent) instead of painting them with the artwork. Clear is an extra material on top of your colors per plate.
 
-**Paint the fret buttons** (on by default) paints the five frets with the artwork. Turn it off for all five in one solid color you pick; that color is an extra filament and doesn't count toward the limit. The five fret color chips always print in one solid color each (the artwork's color at the chip), so they look the same from every side.
+**Paint the fret buttons** (on by default) paints the five frets with the artwork. Turn it off for all five in one solid color: it starts in the color your artwork shows on the frets, and you can pick another. A color that isn't in your artwork is an extra filament and doesn't count toward the limit. The five fret color chips always print in one solid color each (the artwork color covering most of the chip), so they look the same from every side.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/assets/clear-dark.png">
@@ -99,7 +106,7 @@ Click **Export print plates**.
   - **Which pieces?** Everything, only the colored pieces, only the clear pieces, or pieces you pick from the list, grouped by Strum case, Fret case, Extensions, Frame and Headstock.
   - **Assembly parts** (on by default): the color plates, power slider and pivot pins (and on a Micro the PCB braces) in the base color.
   - **Color test tile** and **LED test tile** (off by default): add a 60 × 32 mm tile of your colors, or the LED test tile (see LED light above), to the bundle's `Test-tiles` folder.
-- Click **Prepare export**, wait for **Ready**, then **Save…** and choose where to put it.
+- Click **Prepare export**. A progress bar shows about how long is left; when it says **Ready**, click **Save…** and choose where to put it.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/assets/export-dark.png">
@@ -112,7 +119,7 @@ Click **Export print plates**.
 
 Unzip the bundle. It contains:
 
-- `Polybar-<printer>.3mf` (for example `Polybar-P2S.3mf`): open this in **Bambu Studio**. It's a complete project: plates are named (Housing Shells - Top, Transparent Input Parts, Assembly Parts, one plate per frame wing and faceplate…) and arranged, matching parts are grouped (the five windows are one object), every piece is turned the way it prints (show side down on the textured plate), clear pieces are on their own plates, and each plate uses at most four colors with its prime-tower corner kept free. Press **A** (Arrange) if you want Bambu to re-arrange a plate.
+- `Polybar-<printer>.3mf` (for example `Polybar-P2S.3mf`): open this in **Bambu Studio**. It's a complete project: plates are named (Housing Shells - Top, Transparent Input Parts, Input & Assembly Parts, one plate per frame wing and faceplate…) and arranged, matching parts are grouped (the five windows are one object), every piece is turned the way it prints (show side down on the textured plate), and each plate uses at most four colors with its prime-tower corner kept free. With clear action parts, the fret inserts print on the clear parts' plate. With painted action parts, the fret windows get a plate of their own (tall, thin parts print better without others wobbling around them), and the stop plates, fret inserts, pivot pins and headstock dowel share a **Small Parts** plate. The strum bar prints with slim tree supports; nothing else needs supports. Press **A** (Arrange) if you want Bambu to re-arrange a plate.
 - `Individual-plates/`: one file per plate, for OrcaSlicer, PrusaSlicer or printing one plate at a time.
 - `Plate-manifest.json` and `README.txt`: what's on each plate.
 
@@ -137,6 +144,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.9.0**: based on the team's changelog: **Examples…** (five designs drawn for your Mini or Max build); unpainted frets start in your artwork's color instead of black; fret chips take the color covering most of them (a chip could turn black when you added a headstock); a progress bar with the time left while exporting; new plates (fret windows alone, a Small Parts plate, fret inserts with the clear parts); slim tree supports on the strum bar.
 
 **0.8.0**: based on team feedback: a simpler Export dialog (Advanced fold-out, pieces grouped by section, test tiles only when you add them); fixes "Paint references missing filament" on export; Part set moved under Headstock; Frame only shows just the frame; Clear action parts is a switch; fret color chips print solid; auto colors skip blended edge shades; the color picker no longer jumps; resize cursors point the right way; clearer labels; the legacy Enforcer frame was removed.
 
