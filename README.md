@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.7.3-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.8.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -29,9 +29,9 @@ Under **Choose your build**, pick **Micro**, **Mini** or **Max**.
 
 - **Micro** has no frame.
 - **Half-length extension** (a switch) makes any Mini or Max longer by 85 mm (on a Max it goes after the full extension). It works with every frame.
-- **Mini** and **Max** have a **Frame style** list (Airbourne, Diablo, Maverick, Nomad, Offset, Pioneer, Renegade, Vampire, Wizard; Max also has the older Enforcer). Choose **No frame** for the bare controller.
+- **Mini** and **Max** have a **Frame style** list (Airbourne, Diablo, Maverick, Nomad, Offset, Pioneer, Renegade, Vampire, Wizard). Choose **No frame** for the bare controller.
 - **Headstock:** a Max frame comes with its matching headstock. Any Mini or Max can take any family's headstock from the **Headstock** list (on a Mini it's off by default: it's sized for the Max).
-- **Part set** switches the preview between the assembled guitar, the frame only, and the headstock. Your artwork stays in the same place in every view. In **Frame only**, the housing is drawn see-through blue: artwork stops where it covers the frame, because that part is hidden on the finished guitar.
+- **Part set** (under Headstock) switches the preview between the assembled guitar, the frame only, and the headstock. Your artwork stays in the same place in every view. **Frame only** shows just the frame; artwork stops where the housing covers it on the finished guitar.
 
 Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer), right-drag to pan. Right-drag pans even while an image is selected, so you can zoom in on a horn or the headstock and move around while you place artwork. **Front**, **Angled** and **Back** jump to a view.
 
@@ -46,22 +46,19 @@ Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer
 - **Background › Remove** takes out a solid background around a logo. Raise **Tolerance** if some background stays.
 - A one-color image (a typical logo) gets a small **color dot** in its row under **Layers**: click it to recolor the whole image.
 - **Name your design:** click the title above the preview (for example "Mini / Plain") and type. The name is used for the export files.
-- No image? Open **Patterns** for Waves, Checkers, Voltage or Orbit. **Keep pattern behind images** puts a pattern under your images.
+- No image? Open **Background patterns** for Waves, Checkers, Voltage or Orbit. **Keep pattern behind images** puts a pattern under your images.
 
 ### 3. Pick your colors
 
-- **Color limit** is how many colors each print plate may use: 4 (one AMS), 8, 12, or a custom number. The artwork is reduced to fit. The bottom color, single-color frets and clear don't count: they're extra filaments on their own plates.
+- **Colors per plate** is how many colors each print plate may use: 4 (one AMS), 8, 12, or a custom number. The artwork is reduced to fit. Auto colors only uses real colors from your artwork, not the blended shades along soft edges, so a higher limit can leave slots unused. The base color, single-color frets and clear don't count: they're extra filaments on their own plates.
 - **Palette** shows each color and how much of the artwork uses it. Click a swatch to pick from Bambu Lab's own **PLA Basic** and **PLA Matte** spool colors, or choose **Custom color…**. **Auto colors** rebuilds the palette from the artwork.
-- **BASE** is the housing's bottom and lower surfaces (gray by default).
+- **BASE** (the base color) is the housing's bottom and lower surfaces (gray by default). **Side walls** picks the color of the painted pieces' sides: one artwork color or the base color.
 
-### 4. Action button color
+### 4. Action parts
 
-Choose how the fret windows, stop plates, action buttons and strum bar are printed:
+**Clear action parts** (a switch) prints the fret windows, stop plates, action buttons and strum bar in clear PETG (PETG Translucent) instead of painting them with the artwork. Clear is an extra material on top of your colors per plate.
 
-- **Colored:** painted with the artwork like everything else.
-- **Clear:** they print in clear PETG (PETG Translucent). This is an extra material on top of your color limit.
-
-**Paint the fret buttons** (on by default) paints the five frets with the artwork. Turn it off for frets in one solid color you pick (a smoother surface to press); that color is an extra filament and doesn't count toward the limit.
+**Paint the fret buttons** (on by default) paints the five frets with the artwork. Turn it off for all five in one solid color you pick; that color is an extra filament and doesn't count toward the limit. The five fret color chips always print in one solid color each (the artwork's color at the chip), so they look the same from every side.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/assets/clear-dark.png">
@@ -72,34 +69,36 @@ Choose how the fret windows, stop plates, action buttons and strum bar are print
 
 ### LED light
 
-Light colors on the fret and strum housings let the LEDs shine through. Turn on **Block LED light** (right side, under Action button color) and the last part of those housings' 4 mm shell, plus the walls above it, print in your palette's darkest color; the show side in front of it stays in your colors. That color is already one of your filaments, so it needs no extra AMS slot.
+Light colors on the fret and strum housings let the LEDs shine through. Turn on **Block LED light** (right side, under Action parts) and the last part of those housings' 4 mm shell, plus the walls above it, print in your palette's darkest color; the show side in front of it stays in your colors. That color is already one of your filaments, so it needs no extra AMS slot.
 
 - **Dark layer** (slider or type a value) sets how thick that dark part is: 1.6 mm by default, in whole layers for your nozzle ("1.6 mm · 8 layers" on a 0.4 mm nozzle). At least 1 mm of your colors always stays in front.
-- A warning line appears under it when the layer may be **too thin to block all LED light** (under about 0.6 mm for black, about 1.2 mm for other dark colors like dark blue or brown), or when so little of your colors is left that they **may look darker** (under about 1.4 mm). These are starting estimates, not measurements yet. The export checklist repeats them.
-- To see for yourself, export the **LED test tile** (Export type in the Export dialog): a strip of your lightest color over your darkest at five dark thicknesses (0.4 to 2.0 mm), each labeled on the back. Print it and hold it over a lit fret LED.
+- A warning line appears under it when the layer may be **too thin to block all LED light** (under about 0.6 mm for black, about 1.2 mm for other dark colors like dark blue or brown), or when so little of your colors is left that they **may look darker** (under about 1.4 mm). These are starting estimates, not measurements yet. The Export dialog repeats them.
+- To see for yourself, add the **LED test tile** to your export (Advanced in the Export dialog): a strip of your lightest color over your darkest at five dark thicknesses (0.4 to 2.0 mm), each labeled on the back. Print it and hold it over a lit fret LED.
 
 It's off by default. When you export with light colors on those housings and a dark color in your palette, Polybar Studio asks whether to turn it on. If your palette has no dark color (all pastels, say), there's nothing to block with and the switch stays off.
 
 ### 5. Check printability
 
 - Set **Nozzle size** to the nozzle you print with (0.4 mm is standard).
-- Leave **Optimize for printing** on: it makes sure every color is at least a printable width everywhere, thickening thin lines and clearing hairline gaps and specks. **Adjustment strength** sets that width: Gentle 1.5×, Balanced 2× and Strong 2.5× the nozzle (0.6 / 0.8 / 1.0 mm on a 0.4 mm nozzle). The status line says "Every color … mm+ wide ✓", or how much is still thinner.
-- Exporting with optimization off, or with anything still too thin, shows **Print at your own risk**: tick "I understand…" to continue.
-- **Show original** compares before and after. **Print sample** (above the preview) shows the artwork flat, as printed.
+- Leave **Fix thin lines** on: it makes sure every color is at least a printable width everywhere, thickening thin lines and clearing hairline gaps and specks (in the print only; your images aren't changed). **Strength** sets that width: Gentle 1.5×, Balanced 2× and Strong 2.5× the nozzle (0.6 / 0.8 / 1.0 mm on a 0.4 mm nozzle). The status line says "Every color … mm+ wide ✓", or how much is still thinner.
+- Exporting with Fix thin lines off, or with anything still too thin, shows **Print at your own risk**: tick "I understand…" to continue.
+- **Show original** compares before and after. **Print preview** (above the 3D view) shows the artwork flat, as printed.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/assets/sample-dark.png">
-  <img alt="Print sample view of the Voltage pattern" src=".github/assets/sample-light.png">
+  <img alt="Print preview of the Voltage pattern" src=".github/assets/sample-light.png">
 </picture>
 
 ### 6. Export
 
 Click **Export print plates**.
 
-- **Export type:** *Print plates · ZIP bundle* (the whole guitar), a *60 × 32 mm color test tile* (a quick way to check your colors first), or the *LED test tile* (see LED light above).
 - **Printer:** every Bambu Lab printer (A1, A1 mini, A2L, H2C, H2D, H2D Pro, H2S, P1P, P1S, P2S, X1, X1 Carbon, X1E, X2D). The project uses Bambu's own profiles for that printer and the nozzle chosen under Printability. If a piece is too big for the printer (a Micro housing on an A1 mini), the export says so.
-- **Which pieces?** Everything, only the colored pieces, only the clear pieces, or pieces you tick yourself.
-- **Include the assembly parts** (on by default) adds the color plates, power slider and pivot pins (and on a Micro the PCB braces) in the housing base color.
+- The dialog shows what you'll get (plates for your printer and nozzle, up to your colors per plate) and the filaments to load.
+- **Advanced** (folded by default):
+  - **Which pieces?** Everything, only the colored pieces, only the clear pieces, or pieces you pick from the list, grouped by Strum case, Fret case, Extensions, Frame and Headstock.
+  - **Assembly parts** (on by default): the color plates, power slider and pivot pins (and on a Micro the PCB braces) in the base color.
+  - **Color test tile** and **LED test tile** (off by default): add a 60 × 32 mm tile of your colors, or the LED test tile (see LED light above), to the bundle's `Test-tiles` folder.
 - Click **Prepare export**, wait for **Ready**, then **Save…** and choose where to put it.
 
 <picture>
@@ -107,7 +106,7 @@ Click **Export print plates**.
   <img alt="The export dialog with a prepared 17-plate bundle" src=".github/assets/export-light.png">
 </picture>
 
-**More exports** (above the export button) has **Artwork PNG**, which saves the flat artwork as an image, and **Clear parts plate**.
+**More exports** (above the export button) has **Save artwork PNG**, which saves the flat artwork as an image, and **Export clear parts**.
 
 ### 7. Print it
 
@@ -133,12 +132,13 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Good to know
 
 - **Updates:** Polybar Studio checks when it starts, every 4 hours and when you come back to it. When a new version is out, a bar at the top offers **Update** or **Later** (your design is kept). **About** shows when it last checked. Turn on **Install updates automatically on start** to skip the question, or open **About** (bottom left) and click **Check now**. Updates are signed, so the app only installs genuine ones.
-- **Enforcer** can be previewed and painted, but can't be exported as print plates yet.
 - Exports have been sliced with Bambu Studio's command line (all plates, painted colors intact). Please report anything that looks wrong when you open one (a wrong color, a piece upside down, an odd layout).
 
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.8.0**: based on team feedback: a simpler Export dialog (Advanced fold-out, pieces grouped by section, test tiles only when you add them); fixes "Paint references missing filament" on export; Part set moved under Headstock; Frame only shows just the frame; Clear action parts is a switch; fret color chips print solid; auto colors skip blended edge shades; the color picker no longer jumps; resize cursors point the right way; clearer labels; the legacy Enforcer frame was removed.
 
 **0.7.3**: right-drag pans in every mode and zoom goes toward the mouse pointer; an adjustable **Dark layer** for Block LED light (1.6 mm by default), with warnings and an LED test tile.
 
