@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.9.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.10.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -37,7 +37,9 @@ Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer
 
 ### 2. Add your artwork
 
-- **Start from an example:** click **Examples…** (above the preview) for Sakura, Deep Space, Starry Swirl, Mountain River or Synthwave Sunset. Each one is drawn for the build and frame you chose (Mini or Max), with its main pieces on the body and headstock, in four Bambu spool colors and with every line wide enough to print. It replaces your artwork; everything else stays. Change any of its four layers or colors afterwards.
+- **Start from an example:** click **Examples…** (above the preview) for Sakura, Deep Space, Starry Swirl, Mountain River or Synthwave Sunset. Each one is drawn for the build and frame you chose (Mini or Max), with its main pieces on the body and headstock, in four Bambu spool colors. It replaces your artwork; everything else stays. Change any of its four layers or colors afterwards.
+  - **It follows your build:** change the size, frame, headstock or half-length extension and the example is drawn again for the new shape by itself. Colors you changed on its layers stay. A saved design remembers its example, so it keeps doing this when you open it again.
+  - **Detail:** the examples are drawn with fine detail (lines down to 0.8 mm), so they print best with a 0.4 mm nozzle. On a 0.6 mm nozzle the app thickens the finest lines, as it does for any artwork.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/assets/examples-dark.png">
@@ -144,6 +146,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.10.0**: the examples are redrawn in fine detail (Sakura's notched petals, stamens and cherry bark; a ringed gas giant, comet and galaxy; brush-stroke skies and a village; snow-capped mountains, pines and a river; palms and wireframe mountains), and an example now redraws itself when you change the size, frame or headstock.
 
 **0.9.0**: based on the team's changelog: **Examples…** (five designs drawn for your Mini or Max build); unpainted frets start in your artwork's color instead of black; fret chips take the color covering most of them (a chip could turn black when you added a headstock); a progress bar with the time left while exporting; new plates (fret windows alone, a Small Parts plate, fret inserts with the clear parts); slim tree supports on the strum bar.
 
