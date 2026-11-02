@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.10.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.11.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -31,6 +31,7 @@ Under **Choose your build**, pick **Micro**, **Mini** or **Max**.
 - **Half-length extension** (a switch) makes any Mini or Max longer by 85 mm (on a Max it goes after the full extension). It works with every frame.
 - **Mini** and **Max** have a **Frame style** list (Airbourne, Diablo, Maverick, Nomad, Offset, Pioneer, Renegade, Vampire, Wizard). Choose **No frame** for the bare controller.
 - **Headstock:** a Max frame comes with its matching headstock. Any Mini or Max can take any family's headstock from the **Headstock** list (on a Mini it's off by default: it's sized for the Max).
+- **Whammy** (a switch, on a Max with a frame): turn it off if you don't want a whammy. The whammy chassis and bar then leave the preview and the export. A plug to close the opening is coming; until then the opening stays empty.
 - **Part set** (under Headstock) switches the preview between the assembled guitar, the frame only, and the headstock. Your artwork stays in the same place in every view. **Frame only** shows just the frame; artwork stops where the housing covers it on the finished guitar.
 
 Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer), right-drag to pan. Right-drag pans even while an image is selected, so you can zoom in on a horn or the headstock and move around while you place artwork. **Front**, **Angled** and **Back** jump to a view.
@@ -59,9 +60,21 @@ Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer
 
 ### 3. Pick your colors
 
-- **Colors per plate** is how many colors each print plate may use: 4 (one AMS), 8, 12, or a custom number. The artwork is reduced to fit. Auto colors only uses real colors from your artwork, not the blended shades along soft edges, so a higher limit can leave slots unused. The base color, single-color frets and clear don't count: they're extra filaments on their own plates.
-- **Palette** shows each color and how much of the artwork uses it. Click a swatch to pick from Bambu Lab's own **PLA Basic** and **PLA Matte** spool colors, or choose **Custom color…**. **Auto colors** rebuilds the palette from the artwork.
+- **Colors per part** is the most colors one printed part may use: 4 (one AMS), 8, 12, or a custom number. Every print plate stays within it too; the export adds plates when it needs to. The base color, single-color frets, parts in a color of their own and clear are extra filaments.
+- **Artwork colors** can be more than that, up to 16: your artwork keeps more colors overall, and each part keeps the ones covering most of it. Any other color on that part prints in its nearest kept color. The palette says how many parts this trims, and the 3D view shows exactly what will print.
+- **Palette** is a list with one row per filament: its color, how much of the artwork uses it, and how many parts print it. Click the color to pick from Bambu Lab's own **PLA Basic** and **PLA Matte** spool colors, or choose **Custom color…**. **Auto colors** rebuilds the palette from the artwork. Auto colors only uses real colors from your artwork, not the blended shades along soft edges.
+- Click a row's **arrow** to see the parts that print that color. Each part shows a dot for every color it prints, so you can spot multi-color parts, and **→ ●** when this color prints as another one there.
+- **Right-click a part** in that list (or click **⋯**) to change it on that part only:
+  - **Merge** the color into another color the part already prints.
+  - **Switch** it to any other artwork color.
+  - **Keep** it, when the color limit trimmed it from that part.
+  - **Give it its own color…**, **Show in 3D**, or **Reset to automatic**.
+- **Clean up slivers** merges colors covering less than 1% of a part (thin edges, a stripe just touching it) into the nearest color the part shows more of.
 - **BASE** (the base color) is the housing's bottom and lower surfaces (gray by default). **Side walls** picks the color of the painted pieces' sides: one artwork color or the base color.
+
+### Part colors
+
+Any part can have a solid color of its own, so you can print every part in a different color if you like. Click **Pick parts** (under the preview or in the **Part colors** card), then click a part on the model; **Ctrl**-click picks more. Click **Color…** to choose its color, or **Use default** to go back. **All parts** lists every part, including the color plates and pivot pins that aren't in the preview. Each color of its own is one more filament.
 
 ### 4. Action parts
 
@@ -103,7 +116,7 @@ It's off by default. When you export with light colors on those housings and a d
 Click **Export print plates**.
 
 - **Printer:** every Bambu Lab printer (A1, A1 mini, A2L, H2C, H2D, H2D Pro, H2S, P1P, P1S, P2S, X1, X1 Carbon, X1E, X2D). The project uses Bambu's own profiles for that printer and the nozzle chosen under Printability. If a piece is too big for the printer (a Micro housing on an A1 mini), the export says so.
-- The dialog shows what you'll get (plates for your printer and nozzle, up to your colors per plate) and the filaments to load.
+- The dialog shows what you'll get (plates for your printer and nozzle, up to your colors per part on each plate) and the filaments to load.
 - **Advanced** (folded by default):
   - **Which pieces?** Everything, only the colored pieces, only the clear pieces, or pieces you pick from the list, grouped by Strum case, Fret case, Extensions, Frame and Headstock.
   - **Assembly parts** (on by default): the color plates, power slider and pivot pins (and on a Micro the PCB braces) in the base color.
@@ -146,6 +159,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.11.0**: a **Whammy** switch on Max frames (turn it off to leave the whammy out); give **any part a color of its own**, picked on the model or from a list, so every part can be a different color; **more artwork colors than your per-part limit** (each part keeps the ones it uses most); a simpler **palette list** that shows which parts print each color, with right-click **Merge**, **Switch** and **Keep** per part; **Clean up slivers**.
 
 **0.10.0**: the examples are redrawn in fine detail (Sakura's notched petals, stamens and cherry bark; a ringed gas giant, comet and galaxy; brush-stroke skies and a village; snow-capped mountains, pines and a river; palms and wireframe mountains), and an example now redraws itself when you change the size, frame or headstock.
 
