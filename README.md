@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.11.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.12.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -208,6 +208,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.12.0**: **Undo and redo** (Ctrl + Z / Ctrl + Y, up to 50 steps, even after Start fresh); right-click a part **on the 3D model** for its color menu; **Find a part** in All parts, and picking a part on the model jumps to it there; **Esc** stops picking; round color dots and full part names in the parts lists; a keyboard shortcuts table in this guide.
 
 **0.11.0**: a **Whammy** switch on Max frames (turn it off to leave the whammy out); give **any part a color of its own**, picked on the model or from a list, so every part can be a different color; **more artwork colors than your per-part limit** (each part keeps the ones it uses most); a simpler **palette list** that shows which parts print each color, with right-click **Merge**, **Switch** and **Keep** per part; **Clean up slivers**.
 
