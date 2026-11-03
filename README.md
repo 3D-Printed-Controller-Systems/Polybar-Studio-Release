@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.12.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.13.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -31,7 +31,8 @@ Under **Choose your build**, pick **Micro**, **Mini** or **Max**.
 - **Half-length extension** (a switch) makes any Mini or Max longer by 85 mm (on a Max it goes after the full extension). It works with every frame.
 - **Mini** and **Max** have a **Frame style** list (Airbourne, Diablo, Maverick, Nomad, Offset, Pioneer, Renegade, Vampire, Wizard). Choose **No frame** for the bare controller.
 - **Headstock:** a Max frame comes with its matching headstock. Any Mini or Max can take any family's headstock from the **Headstock** list (on a Mini it's off by default: it's sized for the Max).
-- **Whammy** (a switch, on a Max with a frame): turn it off if you don't want a whammy. The whammy chassis and bar then leave the preview and the export. A plug to close the opening is coming; until then the opening stays empty.
+- **Whammy** (a switch, on a Max with a frame): turn it off if you don't want a whammy. The whammy chassis, bar, magnet paddle and its two pivot pins then leave the preview and the export. A plug to close the opening is coming; until then the opening stays empty.
+- **Power switch** (a switch, off by default): leave it off for the USK boards, which have the power circuit built in; every color plate opening then gets a blank plate. Turn it on for a **DIY Wireless** build: the strum housing gets the power slider (its color plate, toggle plate and switch) instead of a blank.
 - **Part set** (under Headstock) switches the preview between the assembled guitar, the frame only, and the headstock. Your artwork stays in the same place in every view. **Frame only** shows just the frame; artwork stops where the housing covers it on the finished guitar.
 
 Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer), right-drag to pan. Right-drag pans even while an image is selected, so you can zoom in on a horn or the headstock and move around while you place artwork. **Front**, **Angled** and **Back** jump to a view.
@@ -95,12 +96,14 @@ A part never goes over Colors per part: if your changes would push it over, it s
 
 Any part can have a solid color of its own, so you can print every part in a different color if you like.
 
-1. Click **Pick parts** (under the preview, or in the **Part colors** card). The part under the mouse pointer lights up.
+1. Click **Pick parts** (under the preview). The part under the mouse pointer lights up.
 2. Click a part on the model to pick it (it turns blue); **Ctrl**-click picks more, or unpicks one. Clicking empty space clears the pick.
-3. Click **Color…** to choose its color, or **Use default** to give it back the design's colors.
+3. In the bar at the top of the Part colors card, click **Color…** to choose its color, or **×** to give it back the design's colors.
 4. Click **Rotate model** or press **Esc** to stop picking.
 
-**All parts** (in the Part colors card) lists every part by where it goes: Strum case, Fret case, Extensions, Housing, Frame, Headstock, and Assembly parts (the color plates, power slider and pivot pins, which aren't in the preview). Each part shows what it prints: **Artwork** with a dot for each color, **Base color**, **Fret color**, **Own color** or **Clear**. Click a part to pick it there, right-click it for its menu, and type in **Find a part** to filter the list. Picking a part on the model opens the list at that part. **Reset all parts** gives every part the design's colors again.
+The Part colors card lists the parts you've given a color of their own, each with a swatch on the right (click it to change that color). **Find a part** searches every part. **All parts** lists them all in folded groups by where they go: Strum case, Fret case, Extensions, Housing, Frame, Headstock, and Assembly parts. Identical parts are one row ("Fret - Window ×5"): click it to pick all of them, or open it with the arrow for each one. A part's dot shows what it prints (hover for the name: Artwork, Base color, Fret color, Own color or Clear). Click a row to pick it, right-click it for its menu. Picking a part on the model opens the list at that part. **⋯ › Reset all parts** gives every part the design's colors again.
+
+**Every part of the finished controller is in the model**, so you can see and color them: the color plates in the bottom housings, the pivot pins (two for the strum bar, two more for a whammy), the whammy's magnet paddle, the frame's two strap lugs, the Micro's PCB braces, the Vampire headstock's four tuner tabs, and with the Power switch on the power slider. Most sit underneath or inside: use the **Back** view, or find them in All parts. They print in the base color unless you give them a color.
 
 Each color of its own is one more filament. It never counts toward Colors per part; the export puts parts on as many plates as it needs.
 
@@ -147,7 +150,7 @@ Click **Export print plates**.
 - The dialog shows what you'll get (plates for your printer and nozzle, up to your colors per part on each plate) and the filaments to load.
 - **Advanced** (folded by default):
   - **Which pieces?** Everything, only the colored pieces, only the clear pieces, or pieces you pick from the list, grouped by Strum case, Fret case, Extensions, Frame and Headstock.
-  - **Assembly parts** (on by default): the color plates, power slider and pivot pins (and on a Micro the PCB braces) in the base color.
+  - **Assembly parts** (on by default): the color plates, pivot pins and strap lugs (and the power slider with the Power switch on, and on a Micro the PCB braces), in the base color unless given a color.
   - **Color test tile** and **LED test tile** (off by default): add a 60 × 32 mm tile of your colors, or the LED test tile (see LED light above), to the bundle's `Test-tiles` folder.
 - Click **Prepare export**. A progress bar shows about how long is left; when it says **Ready**, click **Save…** and choose where to put it.
 
@@ -208,6 +211,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.13.0**: **every part of an assembled Polybar** in the model and the export: color plates in each housing opening, both strum pivot pins, the whammy's two pivot pins and magnet paddle, two strap lugs per frame, the Vampire's four tuner tabs (all in the base color unless you color them); a **Power switch** setting (off for USK boards: all blank color plates; on for DIY Wireless: the power slider); a simpler **Part colors** card (your colored parts first, search, folded groups, identical parts as one row).
 
 **0.12.0**: **Undo and redo** (Ctrl + Z / Ctrl + Y, up to 50 steps, even after Start fresh); right-click a part **on the 3D model** for its color menu; **Find a part** in All parts, and picking a part on the model jumps to it there; **Esc** stops picking; round color dots and full part names in the parts lists; a keyboard shortcuts table in this guide.
 
