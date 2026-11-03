@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.13.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.13.1-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -32,7 +32,8 @@ Under **Choose your build**, pick **Micro**, **Mini** or **Max**.
 - **Mini** and **Max** have a **Frame style** list (Airbourne, Diablo, Maverick, Nomad, Offset, Pioneer, Renegade, Vampire, Wizard). Choose **No frame** for the bare controller.
 - **Headstock:** a Max frame comes with its matching headstock. Any Mini or Max can take any family's headstock from the **Headstock** list (on a Mini it's off by default: it's sized for the Max).
 - **Whammy** (a switch, on a Max with a frame): turn it off if you don't want a whammy. The whammy chassis, bar, magnet paddle and its two pivot pins then leave the preview and the export. A plug to close the opening is coming; until then the opening stays empty.
-- **Power switch** (a switch, off by default): leave it off for the USK boards, which have the power circuit built in; every color plate opening then gets a blank plate. Turn it on for a **DIY Wireless** build: the strum housing gets the power slider (its color plate, toggle plate and switch) instead of a blank.
+- **Electronics:** **Solderless Kit** (the default) or **DIY**. DIY prints the DIY strum end cap (its USB opening differs) and turns the Power switch on; Solderless Kit prints its own cap and turns the Power switch off.
+- **Power switch** (a switch): off, every color plate opening gets a blank plate (the new Solderless Kit boards have the power circuit built in). On, the strum housing gets the power slider (its color plate, toggle plate and switch) instead of a blank. Picking the electronics sets it (on for DIY, since DIY Wireless needs it), but you can always change it: turn it on for older Solderless Kit electronics, or off for a wired DIY build.
 - **Part set** (under Headstock) switches the preview between the assembled guitar, the frame only, and the headstock. Your artwork stays in the same place in every view. **Frame only** shows just the frame; artwork stops where the housing covers it on the finished guitar.
 
 Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer), right-drag to pan. Right-drag pans even while an image is selected, so you can zoom in on a horn or the headstock and move around while you place artwork. **Front**, **Angled** and **Back** jump to a view.
@@ -211,6 +212,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.13.1**: **Electronics** choice, **Solderless Kit** or **DIY**: DIY prints the DIY strum end cap and turns the Power switch on; the Power switch stays changeable for older Solderless Kits and wired DIY builds.
 
 **0.13.0**: **every part of an assembled Polybar** in the model and the export: color plates in each housing opening, both strum pivot pins, the whammy's two pivot pins and magnet paddle, two strap lugs per frame, the Vampire's four tuner tabs (all in the base color unless you color them); a **Power switch** setting (off for USK boards: all blank color plates; on for DIY Wireless: the power slider); a simpler **Part colors** card (your colored parts first, search, folded groups, identical parts as one row).
 
