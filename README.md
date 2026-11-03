@@ -60,21 +60,49 @@ Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer
 
 ### 3. Pick your colors
 
-- **Colors per part** is the most colors one printed part may use: 4 (one AMS), 8, 12, or a custom number. Every print plate stays within it too; the export adds plates when it needs to. The base color, single-color frets, parts in a color of their own and clear are extra filaments.
-- **Artwork colors** can be more than that, up to 16: your artwork keeps more colors overall, and each part keeps the ones covering most of it. Any other color on that part prints in its nearest kept color. The palette says how many parts this trims, and the 3D view shows exactly what will print.
-- **Palette** is a list with one row per filament: its color, how much of the artwork uses it, and how many parts print it. Click the color to pick from Bambu Lab's own **PLA Basic** and **PLA Matte** spool colors, or choose **Custom color…**. **Auto colors** rebuilds the palette from the artwork. Auto colors only uses real colors from your artwork, not the blended shades along soft edges.
-- Click a row's **arrow** to see the parts that print that color. Each part shows a dot for every color it prints, so you can spot multi-color parts, and **→ ●** when this color prints as another one there.
-- **Right-click a part** in that list (or click **⋯**) to change it on that part only:
-  - **Merge** the color into another color the part already prints.
-  - **Switch** it to any other artwork color.
-  - **Keep** it, when the color limit trimmed it from that part.
-  - **Give it its own color…**, **Show in 3D**, or **Reset to automatic**.
-- **Clean up slivers** merges colors covering less than 1% of a part (thin edges, a stripe just touching it) into the nearest color the part shows more of.
-- **BASE** (the base color) is the housing's bottom and lower surfaces (gray by default). **Side walls** picks the color of the painted pieces' sides: one artwork color or the base color.
+**How many colors.** Two numbers at the top of the right column decide this:
+
+- **Colors per part** is the most colors one printed part may use: 4 (one AMS), 8, 12, or a custom number. Every print plate stays within it too, and the export adds plates when it needs to. The base color, single-color frets, parts in a color of their own and clear are extra filaments on top.
+- **Artwork colors** is how many colors your artwork keeps in total, up to 16. Leave it equal to Colors per part and every part can show every color. Set it higher (say 8 artwork colors at 4 per part) and the artwork keeps all 8, while each part keeps only the 4 covering most of it, and any other color on that part prints in its nearest kept color. A note under the palette says how many parts this trims, and the 3D view shows exactly what will print.
+
+**The palette** is a list with one row per filament, in two groups: **Artwork colors** and **Solid colors** (the base color, single-color frets, parts in a color of their own, and clear).
+
+- Each row shows the color, how much of the artwork uses it, and how many parts print it.
+- Click the color square to pick from Bambu Lab's own **PLA Basic** and **PLA Matte** spool colors, or choose **Custom color…**.
+- **Auto colors** rebuilds the palette from the artwork. It only uses real colors from your artwork, not the blended shades along soft edges.
+- **BASE** (the base color) is the housing's bottom and lower surfaces (gray by default). **Side walls** picks the color of the painted pieces' sides: one artwork color or the base color. A part always keeps its side color.
+
+**Which parts print a color.** Click the **arrow** at the end of a row to open the parts that print that color, largest share first.
+
+- Each part shows a small dot for **every** color it prints, with this row's color ringed, so multi-color parts are easy to spot. The number is how much of that part this color covers.
+- **→ ●** means this color doesn't print on that part: it prints as the color after the arrow (the color limit trimmed it, or you merged or switched it).
+- A faded part shows the color only as a sliver (under 1%) or not at all after a change.
+
+**Change a color on one part.** Right-click a part in that list (or click its **⋯** button), or right-click the part right on the 3D model for the color under the mouse pointer:
+
+- **Merge … into**: print this color as another color the part already prints. The part uses one color less.
+- **Switch … to**: print it as any other artwork color, even one the part doesn't have yet.
+- **Keep … on this part**: shown when the color limit trimmed the color; the part keeps it and drops its next least-used color instead.
+- **Give it its own color…**: the whole part in one solid color (see Part colors below). **Use the design's colors** undoes that.
+- **Show in 3D**: picks the part on the model.
+- **Reset to automatic**: forgets the merges, switches and keeps on that part.
+
+A part never goes over Colors per part: if your changes would push it over, it still keeps its most-used colors. Your changes are saved with the design, and they stay when you edit the palette or press Auto colors, as long as those colors are still in it.
+
+**Clean up slivers** (under the palette): on every part, colors covering less than 1% of it (a thin soft edge, a stripe that just touches it) merge into the nearest color the part shows more of. Changes you already made stay.
 
 ### Part colors
 
-Any part can have a solid color of its own, so you can print every part in a different color if you like. Click **Pick parts** (under the preview or in the **Part colors** card), then click a part on the model; **Ctrl**-click picks more. Click **Color…** to choose its color, or **Use default** to go back. **All parts** lists every part, including the color plates and pivot pins that aren't in the preview. Each color of its own is one more filament.
+Any part can have a solid color of its own, so you can print every part in a different color if you like.
+
+1. Click **Pick parts** (under the preview, or in the **Part colors** card). The part under the mouse pointer lights up.
+2. Click a part on the model to pick it (it turns blue); **Ctrl**-click picks more, or unpicks one. Clicking empty space clears the pick.
+3. Click **Color…** to choose its color, or **Use default** to give it back the design's colors.
+4. Click **Rotate model** or press **Esc** to stop picking.
+
+**All parts** (in the Part colors card) lists every part by where it goes: Strum case, Fret case, Extensions, Housing, Frame, Headstock, and Assembly parts (the color plates, power slider and pivot pins, which aren't in the preview). Each part shows what it prints: **Artwork** with a dot for each color, **Base color**, **Fret color**, **Own color** or **Clear**. Click a part to pick it there, right-click it for its menu, and type in **Find a part** to filter the list. Picking a part on the model opens the list at that part. **Reset all parts** gives every part the design's colors again.
+
+Each color of its own is one more filament. It never counts toward Colors per part; the export puts parts on as many plates as it needs.
 
 ### 4. Action parts
 
@@ -140,6 +168,14 @@ Unzip the bundle. It contains:
 
 In the slicer, pick your actual filament profiles, check that each color goes to the right AMS slot, and look over the sliced preview before printing.
 
+## Undo and redo
+
+**Ctrl + Z** undoes your last change and **Ctrl + Y** (or **Ctrl + Shift + Z**) redoes it; the undo and redo arrows next to **Start fresh** do the same. Up to 50 steps.
+
+- It covers layers (adding, moving, resizing, recoloring, deleting), colors, part colors and per-part merges, switches and keeps, the build, action parts, and print settings.
+- A drag or a slider counts as one step. **Start fresh**, **Open…** and **Examples…** can be undone too, so an accidental Start fresh is one Ctrl + Z away.
+- Turning the model and switching **Part set** aren't steps. While you type in a text box, Ctrl + Z undoes your typing there.
+
 ## Save, open and share designs
 
 - **Save** (Ctrl + S) saves your design as a `.polybar` file: the build, colors, print settings and every layer. **Ctrl + Shift + S** saves a copy under a new name. **Open…** (Ctrl + O) opens one; **Recent** lists the designs you used lately. Double-clicking a `.polybar` file in Explorer opens it too.
@@ -150,6 +186,19 @@ In the slicer, pick your actual filament profiles, check that each color goes to
   <source media="(prefers-color-scheme: dark)" srcset=".github/assets/share-dark.png">
   <img alt="The Share dialog with a picture of the design" src=".github/assets/share-light.png">
 </picture>
+
+## Keyboard shortcuts
+
+| Keys | What it does |
+| --- | --- |
+| **Ctrl + Z** / **Ctrl + Y** (or Ctrl + Shift + Z) | Undo / redo |
+| **Ctrl + S** / **Ctrl + Shift + S** / **Ctrl + O** | Save / save a copy / open |
+| Arrows | Move the selected image (hold **Shift** for bigger steps) |
+| **Ctrl + ↑ / ↓** or **+ / −** | Resize the selected image |
+| **Ctrl + ← / →** or **[ ]** | Rotate the selected image |
+| **Ctrl + D** / **Delete** | Duplicate / remove the selected image |
+| **Esc** | Deselect the image, close a menu, or stop picking parts |
+| Right-click a part | Its color menu (on the model, in All parts, or in the palette) |
 
 ## Good to know
 
