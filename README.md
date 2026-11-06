@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.14.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.14.1-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -73,7 +73,7 @@ Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer
 - Click the color square to pick from Bambu Lab's own **PLA Basic** and **PLA Matte** spool colors, or choose **Custom color…**.
 - **Auto colors** rebuilds the palette from the artwork. It only uses real colors from your artwork, not the blended shades along soft edges.
 - **BASE** (the base color) is the housing's bottom and lower surfaces (gray by default). **Side walls** picks the color of the painted pieces' sides: one artwork color or the base color. A part always keeps its side color.
-- **Edges in the side color** (a switch under Side walls): every chamfer, rim, rounded edge and wall of the painted pieces prints in the side-wall color, straight from the controller's shape. **Steeper than** sets how steep a face must be (30° by default; lower takes in gentler slopes). With white side walls and dark artwork, every edge gets a crisp white accent (the fret windows, tuners, housing joints and body outline), with nothing to draw. Textured surfaces like the whammy grip keep the artwork color.
+- **Color the edges** (a switch under Side walls): every chamfer, rim and rounded edge of the painted pieces prints in the **Edge color** (white by default; click it for any spool color), straight from the controller's shape. With dark artwork you get crisp edge accents everywhere (the fret windows, tuners, housing joints and body outline), with nothing to draw. **Steeper than** sets how steep a face must be (30° by default; lower takes in gentler slopes). Textured surfaces like the whammy grip keep the artwork color. The edge color is one more filament: each piece keeps one color free for it, so it needs at least 3 colors per part. Set **Side walls** to **Edge color** to give the walls the same color at no extra cost.
 
 **Which parts print a color.** Click the **arrow** at the end of a row to open the parts that print that color, largest share first.
 
@@ -213,6 +213,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.14.1**: edges get their own **Edge color** (in 0.14.0 they used the side-wall color, which by default matched the artwork, so the switch looked like it did nothing); **Side walls** can use the edge color.
 
 **0.14.0**: **Edges in the side color**: every chamfer, rim and rounded edge can print in the side-wall color, straight from the controller's shape (a switch and an angle under Side walls), for clean edge accents everywhere.
 
