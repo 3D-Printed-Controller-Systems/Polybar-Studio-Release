@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.14.1-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.14.2-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -213,6 +213,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.14.2**: crisper edge lines. **Color the edges** now judges each face by its own angle, so rims (like the joystick's) and housing joints come out as clean, even lines instead of notched ones; textured grips still stay in the artwork color.
 
 **0.14.1**: edges get their own **Edge color** (in 0.14.0 they used the side-wall color, which by default matched the artwork, so the switch looked like it did nothing); **Side walls** can use the edge color.
 
