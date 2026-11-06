@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.14.2-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.14.3-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -73,7 +73,7 @@ Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer
 - Click the color square to pick from Bambu Lab's own **PLA Basic** and **PLA Matte** spool colors, or choose **Custom color…**.
 - **Auto colors** rebuilds the palette from the artwork. It only uses real colors from your artwork, not the blended shades along soft edges.
 - **BASE** (the base color) is the housing's bottom and lower surfaces (gray by default). **Side walls** picks the color of the painted pieces' sides: one artwork color or the base color. A part always keeps its side color.
-- **Color the edges** (a switch under Side walls): every chamfer, rim and rounded edge of the painted pieces prints in the **Edge color** (white by default; click it for any spool color), straight from the controller's shape. With dark artwork you get crisp edge accents everywhere (the fret windows, tuners, housing joints and body outline), with nothing to draw. **Steeper than** sets how steep a face must be (30° by default; lower takes in gentler slopes). Textured surfaces like the whammy grip keep the artwork color. The edge color is one more filament: each piece keeps one color free for it, so it needs at least 3 colors per part. Set **Side walls** to **Edge color** to give the walls the same color at no extra cost.
+- **Color the edges** (a switch under Side walls): every chamfer, rim and rounded edge of the painted pieces prints in the **Edge color** (white by default; click it for any spool color), straight from the controller's shape. With dark artwork you get crisp edge accents everywhere (around the fret openings, tuners, housing joints and body outline), with nothing to draw. The fret windows themselves stay the artwork color, and the whammy bar only takes the edge color on its walls (its sloped top and raised tip stay the artwork). **Steeper than** sets how steep a face must be (30° by default; lower takes in gentler slopes). Textured surfaces like the whammy grip keep the artwork color. The edge color is one more filament: each piece keeps one color free for it, so it needs at least 3 colors per part. Set **Side walls** to **Edge color** to give the walls the same color at no extra cost.
 
 **Which parts print a color.** Click the **arrow** at the end of a row to open the parts that print that color, largest share first.
 
@@ -213,6 +213,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.14.3**: cleaner edges. The 3D view now shows exactly the faces that print in the edge color; edge lines end level where the artwork stops (no more slanted tips where the top housings meet); the fret windows stay the artwork color; the whammy bar's sloped top and raised tip stay the artwork color, with edges only on its walls; and thin slivers inside edge lines (like on the Pioneer frame's horn) are gone. Security: updated app dependencies (removed the unused ZIP unpacker from the updater; tokio 1.54.1).
 
 **0.14.2**: crisper edge lines. **Color the edges** now judges each face by its own angle, so rims (like the joystick's) and housing joints come out as clean, even lines instead of notched ones; textured grips still stay in the artwork color.
 
