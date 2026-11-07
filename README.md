@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.16.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.16.1-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -73,7 +73,7 @@ Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer
 - Click the color square to pick from Bambu Lab's own **PLA Basic** and **PLA Matte** spool colors, or choose **Custom color…**.
 - **Auto colors** rebuilds the palette from the artwork. It only uses real colors from your artwork, not the blended shades along soft edges.
 - **BASE** (the base color) is the housing's bottom and lower surfaces (gray by default). **Side walls** picks the color of the painted pieces' sides: one artwork color or the base color. A part always keeps its side color.
-- **Color the edges** (a switch under Side walls): every chamfer, rim and rounded edge of the painted pieces prints in the **Edge color** (white by default; click it for any spool color), straight from the controller's shape. With dark artwork you get crisp edge accents everywhere (around the fret openings, tuners, housing joints and body outline), with nothing to draw. The fret windows themselves stay the artwork color. The whammy bar takes the edge color on both of its sides alike, each with its rounded or chamfered edge, whatever the angle; its top and tip stay the artwork. **Steeper than** sets how steep a face must be (30° by default; lower takes in gentler slopes). Textured surfaces like the whammy grip keep the artwork color. The edge color is one more filament: each piece keeps one color free for it, so it needs at least 3 colors per part. Set **Side walls** to **Edge color** to give the walls the same color at no extra cost.
+- **Edge Highlights** (its own card; switch **Highlight Edges**): every chamfer, rim and rounded edge of the painted pieces prints in the **Edge color** (white by default; click it for any spool color), straight from the controller's shape. With dark artwork you get crisp edge accents everywhere (around the fret openings, tuners, housing joints and body outline), with nothing to draw. The fret windows themselves stay the artwork color. The whammy bar takes the edge color on both of its sides alike, each with its rounded or chamfered edge, whatever the angle; its top and tip stay the artwork. **Steeper than** sets how steep a face must be (30° by default; lower takes in gentler slopes). Textured surfaces like the whammy grip keep the artwork color. The edge color is one more filament: each piece keeps one color free for it, so it needs at least 3 colors per part. Set **Side walls** to **Edge color** to give the walls the same color at no extra cost.
 
 **Which parts print a color.** Click the **arrow** at the end of a row to open the parts that print that color, largest share first.
 
@@ -214,6 +214,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.16.1**: the palette shows each color as a tile; hover a tile and click its arrow to see the color code and the parts printing in it. Colored edges moved to their own **Edge Highlights** card. Labels use Title Case, and the export button reads **Export .3MF**. Changing the size keeps your frame (a Max Wizard becomes a Mini Wizard). Fixed: the half-length extension's top housing was upside down in the 3D view and printed outer face up; it now shows and prints like the full extension.
 
 **0.16.0**: a new look and a rebuilt app. Polybar Studio now follows our App-Kit design: its own title bar on the Windows 11 Mica background, side panels that fold away when the window is narrow, a toolbar for the design, help behind the (i) next to each title, two-click confirms, and errors in their own window. The whole interface was rewritten (Svelte) on a cleaner base that is ready for future products; your designs, settings and exports work as before. Updates now live in the first row at the bottom left (no automatic install). The pictures in this guide still show the previous look.
 
