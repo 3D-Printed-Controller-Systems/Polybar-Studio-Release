@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.15.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.16.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -208,12 +208,14 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 
 ## Good to know
 
-- **Updates:** Polybar Studio checks when it starts, every 4 hours and when you come back to it. When a new version is out, a bar at the top offers **Update** or **Later** (your design is kept). **About** shows when it last checked. Turn on **Install updates automatically on start** to skip the question, or open **About** (bottom left) and click **Check now**. Updates are signed, so the app only installs genuine ones.
+- **Updates:** Polybar Studio checks a few seconds after it starts and every 4 hours. The first row at the bottom of the left panel says **Up to date**, or **Update to** the new version: click it to download, install and reopen (your design is kept). Updates are signed, so the app only installs genuine ones, and nothing installs without your click.
 - Exports have been sliced with Bambu Studio's command line (all plates, painted colors intact). Please report anything that looks wrong when you open one (a wrong color, a piece upside down, an odd layout).
 
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.16.0**: a new look and a rebuilt app. Polybar Studio now follows our App-Kit design: its own title bar on the Windows 11 Mica background, side panels that fold away when the window is narrow, a toolbar for the design, help behind the (i) next to each title, two-click confirms, and errors in their own window. The whole interface was rewritten (Svelte) on a cleaner base that is ready for future products; your designs, settings and exports work as before. Updates now live in the first row at the bottom left (no automatic install). The pictures in this guide still show the previous look.
 
 **0.15.0**: up to 32 layers (was 12); undo, redo, opening a design and dropping several images at once are much faster with many large images (one undo with 32 big images went from minutes to seconds), and undo no longer moves the camera; both sides of the whammy bar now take the edge color alike (one side is rounded, the other chamfered and flat for the print bed, so they used to look different), while its top and tip stay the artwork color. A design with more than 12 layers needs 0.15.0 or newer to open.
 
