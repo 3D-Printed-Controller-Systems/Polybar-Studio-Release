@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.14.3-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.15.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -49,7 +49,7 @@ Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer
   <img alt="The Examples sheet with five designs drawn for a Max with the Pioneer frame" src=".github/assets/examples-light.png">
 </picture>
 
-- Drop images onto **Add images**, or click it to browse. New images, shapes and text start on the largest open area of the body. SVG (up to 5 MB), PNG, JPG and WebP (up to 15 MB) work; you can stack up to 12 layers.
+- Drop images onto **Add images**, or click it to browse. New images, shapes and text start on the largest open area of the body. SVG (up to 5 MB), PNG, JPG and WebP (up to 15 MB) work; you can stack up to 32 layers. Choose or drop several images at once to add them together.
 - Click an image on the model to select it, then drag it into place. Clicking anywhere inside a selected image's box keeps it selected. **Size** and **Rotation** have sliders and number boxes you can type in; **Center**, **Fit** and **Done** are below them. Click away from the image to go back to rotating the model.
 - **Keyboard** (while an image is selected): arrows move it; **Ctrl + ↑ / ↓** or **+ / −** resize; **Ctrl + ← / →** or **[ ]** rotate; hold **Shift** for bigger steps; **Ctrl + D** duplicates; **Delete** removes; **Esc** deselects.
 - Each layer in **Layers** shows a small preview. **⧉** duplicates a layer, the trash can removes it.
@@ -73,7 +73,7 @@ Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer
 - Click the color square to pick from Bambu Lab's own **PLA Basic** and **PLA Matte** spool colors, or choose **Custom color…**.
 - **Auto colors** rebuilds the palette from the artwork. It only uses real colors from your artwork, not the blended shades along soft edges.
 - **BASE** (the base color) is the housing's bottom and lower surfaces (gray by default). **Side walls** picks the color of the painted pieces' sides: one artwork color or the base color. A part always keeps its side color.
-- **Color the edges** (a switch under Side walls): every chamfer, rim and rounded edge of the painted pieces prints in the **Edge color** (white by default; click it for any spool color), straight from the controller's shape. With dark artwork you get crisp edge accents everywhere (around the fret openings, tuners, housing joints and body outline), with nothing to draw. The fret windows themselves stay the artwork color, and the whammy bar only takes the edge color on its walls (its sloped top and raised tip stay the artwork). **Steeper than** sets how steep a face must be (30° by default; lower takes in gentler slopes). Textured surfaces like the whammy grip keep the artwork color. The edge color is one more filament: each piece keeps one color free for it, so it needs at least 3 colors per part. Set **Side walls** to **Edge color** to give the walls the same color at no extra cost.
+- **Color the edges** (a switch under Side walls): every chamfer, rim and rounded edge of the painted pieces prints in the **Edge color** (white by default; click it for any spool color), straight from the controller's shape. With dark artwork you get crisp edge accents everywhere (around the fret openings, tuners, housing joints and body outline), with nothing to draw. The fret windows themselves stay the artwork color. The whammy bar takes the edge color on both of its sides alike, each with its rounded or chamfered edge, whatever the angle; its top and tip stay the artwork. **Steeper than** sets how steep a face must be (30° by default; lower takes in gentler slopes). Textured surfaces like the whammy grip keep the artwork color. The edge color is one more filament: each piece keeps one color free for it, so it needs at least 3 colors per part. Set **Side walls** to **Edge color** to give the walls the same color at no extra cost.
 
 **Which parts print a color.** Click the **arrow** at the end of a row to open the parts that print that color, largest share first.
 
@@ -179,6 +179,7 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 
 - It covers layers (adding, moving, resizing, recoloring, deleting), colors, part colors and per-part merges, switches and keeps, the build, action parts, and print settings.
 - A drag or a slider counts as one step. **Start fresh**, **Open…** and **Examples…** can be undone too, so an accidental Start fresh is one Ctrl + Z away.
+- Undo stays quick with many large images, and it doesn't move the camera.
 - Turning the model and switching **Part set** aren't steps. While you type in a text box, Ctrl + Z undoes your typing there.
 
 ## Save, open and share designs
@@ -213,6 +214,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.15.0**: up to 32 layers (was 12); undo, redo, opening a design and dropping several images at once are much faster with many large images (one undo with 32 big images went from minutes to seconds), and undo no longer moves the camera; both sides of the whammy bar now take the edge color alike (one side is rounded, the other chamfered and flat for the print bed, so they used to look different), while its top and tip stay the artwork color. A design with more than 12 layers needs 0.15.0 or newer to open.
 
 **0.14.3**: cleaner edges. The 3D view now shows exactly the faces that print in the edge color; edge lines end level where the artwork stops (no more slanted tips where the top housings meet); the fret windows stay the artwork color; the whammy bar's sloped top and raised tip stay the artwork color, with edges only on its walls; and thin slivers inside edge lines (like on the Pioneer frame's horn) are gone. Security: updated app dependencies (removed the unused ZIP unpacker from the updater; tokio 1.54.1).
 
