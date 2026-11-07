@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.16.1-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.17.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -214,6 +214,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.17.0**: a first-time tour. The first time you open Polybar Studio, a short walkthrough points at each part of the window and says what it does, from choosing your build to Export .3MF, and ends by opening the example designs. **Take the Tour** (bottom left, or in About) shows it again any time.
 
 **0.16.1**: the palette shows each color as a tile; hover a tile and click its arrow to see the color code and the parts printing in it. Colored edges moved to their own **Edge Highlights** card. Labels use Title Case, and the export button reads **Export .3MF**. Changing the size keeps your frame (a Max Wizard becomes a Mini Wizard). Fixed: the half-length extension's top housing was upside down in the 3D view and printed outer face up; it now shows and prints like the full extension.
 
