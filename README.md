@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.18.2-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.18.3-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -222,6 +222,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.18.3**: part colors follow the build. Switching a part-colored guitar to another size or frame now colors the new parts from the ones they replace (a Mini Maverick turned into a Max: the wings and sleeves take the frame's color, the four plates the two plates', the full extension the fret housing's, the headstock the frame's and front plate's) instead of leaving them black. Edge Highlights now also show on parts given a color of their own.
 
 **0.18.2**: smoother frames. Every frame, plate, wing, sleeve and headstock part is now made from the CAD at 0.03 mm (it was up to about 0.5 mm off on long curves), so rounded sides no longer show flat bands in the slicer or on the print; the Maverick Max front-left plate also had a missing face, now closed. The 3D view shades curves smoothly too. Exports with a frame are larger (a Max Pioneer is about 39 MB).
 
