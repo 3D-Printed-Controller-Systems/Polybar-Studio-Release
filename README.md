@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.17.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.18.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -89,6 +89,13 @@ Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer
 - **Give it its own color…**: the whole part in one solid color (see Part colors below). **Use the design's colors** undoes that.
 - **Show in 3D**: picks the part on the model.
 - **Reset to automatic**: forgets the merges, switches and keeps on that part.
+
+**Find and move parts by dragging.**
+
+- **Click a part's name** in that list to light it up in the 3D view: the part shows as it is and the rest of the controller turns into a faint ghost, so even parts inside the housings show. The camera turns around when the part is on the back. Shift + click lights more parts. Click the name again, press Esc, or click outside the palette to put it out.
+- **Drag a part's name onto another artwork color tile**: on that part, this color now prints as the tile's color (a merge when the part already prints it, a switch otherwise). While you hover over a tile the 3D view shows the result; tiles it can go to get a ring, and a note by the pointer says what will happen, or why it can't (it would give the part more colors than Colors per part). Ctrl + Z undoes it.
+- **Drag a whole artwork tile onto another** to merge that color into the other everywhere: one filament less. Like any palette color edit, a change to the artwork (adding or moving a layer, Auto colors) builds the palette again.
+- **Pick Parts** works the other way round: click a part on the model and the palette opens at the color it shows most, with the part marked.
 
 A part never goes over Colors per part: if your changes would push it over, it still keeps its most-used colors. Your changes are saved with the design, and they stay when you edit the palette or press Auto colors, as long as those colors are still in it.
 
@@ -214,6 +221,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.18.0**: the palette and the 3D view work together. Click a part under a palette color to light it up in the 3D view (the rest turns into a ghost); drag it onto another color to merge or switch that color on the part, or drag a whole color onto another to merge it everywhere, with the result shown in 3D while you hover. Picking a part on the model opens the palette at it.
 
 **0.17.0**: a first-time tour. The first time you open Polybar Studio, a short walkthrough points at each part of the window and says what it does, from choosing your build to Export .3MF, and ends by opening the example designs. **Take the Tour** (bottom left, or in About) shows it again any time.
 
