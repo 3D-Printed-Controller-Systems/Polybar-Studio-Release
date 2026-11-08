@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.18.5-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.18.6-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit Ã‚Â· about 50 MB Ã‚Â· works offline Ã‚Â· [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) Ã‚Â· share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -222,6 +222,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.18.6**: the strum bar keeps more room on its plate, so its tree supports no longer run into the next part (Bambu Studio's command line rejected that plate).
 
 **0.18.5**: smoother curved frame walls (triangles that were up to 0.94 mm off the CAD surface are now within 0.03 mm, so no streaks in the slicer).
 
