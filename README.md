@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.18.8-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.18.9-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit Ã‚Â· about 50 MB Ã‚Â· works offline Ã‚Â· [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) Ã‚Â· share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -222,6 +222,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.18.9**: Switch To works on painted color chips (white chips under the text), also when the palette holds a color twice or a color shifted a shade; turning on Paint the Color Chips keeps chip switches.
 
 **0.18.8**: turning on Paint the Color Chips clears the chips' own colors (which printed instead of the artwork); a note with Clear finds any left.
 
