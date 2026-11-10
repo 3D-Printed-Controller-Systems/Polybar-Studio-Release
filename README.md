@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.20.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.21.0-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -31,7 +31,7 @@ Under **Choose your build**, pick **Micro**, **Mini** or **Max**.
 - **Half-length extension** (a switch) makes any Mini or Max longer by 85 mm (on a Max it goes after the full extension). It works with every frame.
 - **Mini** and **Max** have a **Frame style** list (Airbourne, Diablo, Maverick, Nomad, Offset, Pioneer, Renegade, Vampire, Wizard). Choose **No frame** for the bare controller.
 - **Headstock:** a Max frame comes with its matching headstock. Any Mini or Max can take any family's headstock from the **Headstock** list (on a Mini it's off by default: it's sized for the Max).
-- **Whammy** (a switch, on a Max with a frame): turn it off if you don't want a whammy. The whammy chassis, bar, magnet paddle and its two pivot pins then leave the preview and the export. A plug to close the opening is coming; until then the opening stays empty.
+- **Whammy** (a switch, on a Max with a frame): turn it off if you don't want a whammy. The whammy chassis, bar, magnet paddle and its two pivot pins then leave the preview and the export, and a **fill plate** closes the opening (the Airbourne has its own), painted with your artwork like the frame around it.
 - **Electronics:** **Solderless Kit** (the default) or **DIY**. DIY prints the DIY strum end cap (its USB opening differs) and turns the Power switch on; Solderless Kit prints its own cap and turns the Power switch off.
 - **Power switch** (a switch): off, every color plate opening gets a blank plate (the new Solderless Kit boards have the power circuit built in). On, the strum housing gets the power slider (its color plate, toggle plate and switch) instead of a blank. Picking the electronics sets it (on for DIY, since DIY Wireless needs it), but you can always change it: turn it on for older Solderless Kit electronics, or off for a wired DIY build.
 - **Part set** (under Headstock) switches the preview between the assembled guitar, the frame only, and the headstock. Your artwork stays in the same place in every view. **Frame only** shows just the frame; artwork stops where the housing covers it on the finished guitar.
@@ -222,6 +222,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.21.0**: with **Whammy** off, a Max now gets the team's **whammy fill plate** in the opening (the Airbourne its own); the **redesigned strum bars** (long and short) print without supports.
 
 **0.20.0**: nine more example designs in **Examples…** (Koi Pond, Sunflowers, Desert Cactus, 'Murica, Hot Rod Flames, 8-Bit Arcade, Groovy Mystery, Baby Toybox, Meme Frog), each drawn for your build.
 
