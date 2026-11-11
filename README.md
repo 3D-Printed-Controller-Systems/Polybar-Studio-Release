@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.22.2-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.22.3-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -88,7 +88,7 @@ Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer
 - **Merge … into**: print this color as another color the part already prints. The part uses one color less.
 - **Switch … to**: print it as any other artwork color, even one the part doesn't have yet.
 - **Keep … on this part**: shown when the color limit trimmed the color; the part keeps it and drops its next least-used color instead.
-- **Give it its own color…**: the whole part in one solid color (see Part colors below). **Use the design's colors** undoes that.
+- **Give it its own color…**: the part in one solid color, with your stickers on top (see Part colors below). **Use the design's colors** undoes that.
 - **Show in 3D**: picks the part on the model.
 - **Reset to automatic**: forgets the merges, switches and keeps on that part.
 
@@ -106,7 +106,7 @@ A part never goes over Colors per part: if your changes would push it over, it s
 
 ### Part colors
 
-Any part can have a solid color of its own, so you can print every part in a different color if you like.
+Any part can have a solid color of its own, so you can print every part in a different color if you like. On a part that takes the artwork (a plate, a housing, the faceplate), your stickers, shapes and text still show on top: the part's color takes the place of the plain background and is its sides' color.
 
 1. Click **Pick parts** (under the preview). The part under the mouse pointer lights up.
 2. Click a part on the model to pick it (it turns blue); **Ctrl**-click picks more, or unpicks one. Clicking empty space clears the pick.
@@ -224,6 +224,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.22.3**: stickers, shapes and text on the front now show on parts you gave a color of their own too (a green plate with your text on it); the part's color is its background and sides.
 
 **0.22.2**: stickers and text on the back now show on parts you gave a color of their own (like white back plates); before, they showed only on the neck.
 
