@@ -36,7 +36,7 @@ Under **Choose your build**, pick **Micro**, **Mini** or **Max**.
 - **Power switch** (a switch): off, every color plate opening gets a blank plate (the new Solderless Kit boards have the power circuit built in). On, the strum housing gets the power slider (its color plate, toggle plate and switch) instead of a blank. Picking the electronics sets it (on for DIY, since DIY Wireless needs it), but you can always change it: turn it on for older Solderless Kit electronics, or off for a wired DIY build.
 - **Part set** (under Headstock) switches the preview between the assembled guitar, the frame only, and the headstock. Your artwork stays in the same place in every view. **Frame only** shows just the frame; artwork stops where the housing covers it on the finished guitar.
 
-Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer), right-drag to pan. Right-drag pans even while an image is selected, so you can zoom in on a horn or the headstock and move around while you place artwork. **Front**, **Angled** and **Back** jump to a view.
+Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer), right-drag to pan. Right-drag pans even while a sticker is selected, so you can zoom in on a horn or the headstock and move around while you place artwork. **Front**, **Angled** and **Back** jump to a view.
 
 ### 2. Add your artwork
 
@@ -49,16 +49,18 @@ Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer
   <img alt="The Examples sheet with five designs drawn for a Max with the Pioneer frame" src=".github/assets/examples-light.png">
 </picture>
 
-- Drop images onto **Add images**, or click it to browse. New images, shapes and text start on the largest open area of the body. SVG (up to 5 MB), PNG, JPG and WebP (up to 15 MB) work; you can stack up to 32 layers. Choose or drop several images at once to add them together.
-- Click an image on the model to select it, then drag it into place. Clicking anywhere inside a selected image's box keeps it selected. **Size** and **Rotation** have sliders and number boxes you can type in; **Center**, **Fit** and **Done** are below them. Click away from the image to go back to rotating the model.
-- **Keyboard** (while an image is selected): arrows move it; **Ctrl + ↑ / ↓** or **+ / −** resize; **Ctrl + ← / →** or **[ ]** rotate; hold **Shift** for bigger steps; **Ctrl + D** duplicates; **Delete** removes; **Esc** deselects.
+- Drop pictures onto **Add Stickers**, or click it to browse: each one becomes a sticker. New stickers, shapes and text start on the largest open area of the body. SVG (up to 5 MB), PNG, JPG and WebP (up to 15 MB) work; you can stack up to 32 layers. Choose or drop several pictures at once to add them together.
+- Click a sticker on the model to select it, then drag it into place. Clicking anywhere inside a selected sticker's box keeps it selected. **Size** and **Rotation** have sliders and number boxes you can type in; **Center**, **Fit** and **Done** are below them. Click away from the sticker to go back to rotating the model.
+- **Keyboard** (while a sticker is selected): arrows move it; **Ctrl + ↑ / ↓** or **+ / −** resize; **Ctrl + ← / →** or **[ ]** rotate; hold **Shift** for bigger steps; **Ctrl + D** duplicates; **Delete** removes; **Esc** deselects.
 - Each layer in **Layers** shows a small preview. **⧉** duplicates a layer, the trash can removes it.
-- **Repeat** (under the selected image) tiles it as a pattern: set the spacing, and optionally offset every other row. Dragging any copy moves them all.
+- **Repeat** (under the selected sticker) tiles it as a pattern: set the spacing, and optionally offset every other row. Dragging any copy moves them all.
 - **Add shape** adds a circle, ring, square, triangle, diamond, hexagon, star, burst, heart, lightning bolt, arrow or music note. **Add text** adds text: type it under the selected layer and pick a font and Bold. Shapes and text are one color: recolor them with their color dot.
 - **Background › Remove** takes out a solid background around a logo. Raise **Tolerance** if some background stays.
-- A one-color image (a typical logo) gets a small **color dot** in its row under **Layers**: click it to recolor the whole image.
+- A one-color sticker (a typical logo) gets a small **color dot** in its row under **Layers**: click it to recolor the whole sticker.
+- **The back of the guitar:** turn the model to the back (**Back**, or drag it around) and add a sticker, shape or text: it goes on the back, and the view stays there while you place it. Any selected layer has a **Front / Back** switch, and back layers show **Back** in the Layers list. Back art prints on the surfaces you see from behind (back plates, wings, bottom housings, the headstock's back) and shares the palette with the front. Clear parts and parts in a color of their own stay as they are. **Fix thin lines** and **Print preview** work on the front only for now, and versions before 0.22.0 draw back layers on the front.
+- **Sticker Inventory** (in the Artwork card) keeps stickers on this computer to use again. **New Sticker…** takes a picture through its steps: remove the background (with a tolerance), crop (drag the frame, or **Trim to Sticker**), brightness and contrast, then **Save Sticker** or **Save and Add**. In the list, **Add** puts one on the guitar, **Edit** changes it, ✎ renames it, and **Delete** asks twice. **Save to Inventory** (under a selected layer) keeps any sticker, shape or text from your design. The inventory isn't part of design files.
 - **Name your design:** click the title above the preview (for example "Mini / Plain") and type. The name is used for the export files.
-- No image? Open **Background patterns** for Waves, Checkers, Voltage or Orbit. **Keep pattern behind images** puts a pattern under your images.
+- No sticker? Open **Background Patterns** for Waves, Checkers, Voltage or Orbit. **Keep Pattern Behind Stickers** puts a pattern under your stickers.
 
 ### 3. Pick your colors
 
@@ -143,7 +145,7 @@ It's off by default. When you export with light colors on those housings and a d
 ### 5. Check printability
 
 - Set **Nozzle size** to the nozzle you print with (0.4 mm is standard).
-- Leave **Fix thin lines** on: it makes sure every color is at least a printable width everywhere, thickening thin lines and clearing hairline gaps and specks (in the print only; your images aren't changed). **Strength** sets that width: Gentle 1.5×, Balanced 2× and Strong 2.5× the nozzle (0.6 / 0.8 / 1.0 mm on a 0.4 mm nozzle). The status line says "Every color … mm+ wide ✓", or how much is still thinner.
+- Leave **Fix thin lines** on: it makes sure every color is at least a printable width everywhere, thickening thin lines and clearing hairline gaps and specks (in the print only; your stickers aren't changed). **Strength** sets that width: Gentle 1.5×, Balanced 2× and Strong 2.5× the nozzle (0.6 / 0.8 / 1.0 mm on a 0.4 mm nozzle). The status line says "Every color … mm+ wide ✓", or how much is still thinner.
 - Exporting with Fix thin lines off, or with anything still too thin, shows **Print at your own risk**: tick "I understand…" to continue.
 - **Show original** compares before and after. **Print preview** (above the 3D view) shows the artwork flat, as printed.
 
@@ -175,7 +177,7 @@ Click **Export print plates**.
 
 Unzip the bundle. It contains:
 
-- `Polybar-<printer>.3mf` (for example `Polybar-P2S.3mf`): open this in **Bambu Studio**. It's a complete project: plates are named (Housing Shells - Top, Transparent Input Parts, Input & Assembly Parts, one plate per frame wing and faceplate…) and arranged, matching parts are grouped (the five windows are one object), every piece is turned the way it prints (show side down on the textured plate), and each plate uses at most four colors with its prime-tower corner kept free. With clear action parts, the fret inserts print on the clear parts' plate. With painted action parts, the fret windows get a plate of their own (tall, thin parts print better without others wobbling around them), and the stop plates, fret inserts, pivot pins and headstock dowel share a **Small Parts** plate. The strum bar prints with slim tree supports; nothing else needs supports. Press **A** (Arrange) if you want Bambu to re-arrange a plate.
+- `Polybar-<printer>.3mf` (for example `Polybar-P2S.3mf`): open this in **Bambu Studio**. It's a complete project: plates are named (Housing Shells - Top, Transparent Input Parts, Input & Assembly Parts, one plate per frame wing and faceplate…) and arranged, matching parts are grouped (the five windows are one object), every piece is turned the way it prints (show side down on the textured plate), and each plate uses at most four colors with its prime-tower corner kept free. With clear action parts, the fret inserts print on the clear parts' plate. With painted action parts, the fret windows get a plate of their own (tall, thin parts print better without others wobbling around them), and the stop plates, fret inserts, pivot pins and headstock dowel share a **Small Parts** plate. No part needs supports (the strum bars were redesigned for that). Press **A** (Arrange) if you want Bambu to re-arrange a plate.
 - `Individual-plates/`: one file per plate, for OrcaSlicer, PrusaSlicer or printing one plate at a time.
 - `Plate-manifest.json` and `README.txt`: what's on each plate.
 
@@ -187,7 +189,7 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 
 - It covers layers (adding, moving, resizing, recoloring, deleting), colors, part colors and per-part merges, switches and keeps, the build, action parts, and print settings.
 - A drag or a slider counts as one step. **Start fresh**, **Open…** and **Examples…** can be undone too, so an accidental Start fresh is one Ctrl + Z away.
-- Undo stays quick with many large images, and it doesn't move the camera.
+- Undo stays quick with many large stickers, and it doesn't move the camera.
 - Turning the model and switching **Part set** aren't steps. While you type in a text box, Ctrl + Z undoes your typing there.
 
 ## Save, open and share designs
@@ -207,11 +209,11 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 | --- | --- |
 | **Ctrl + Z** / **Ctrl + Y** (or Ctrl + Shift + Z) | Undo / redo |
 | **Ctrl + S** / **Ctrl + Shift + S** / **Ctrl + O** | Save / save a copy / open |
-| Arrows | Move the selected image (hold **Shift** for bigger steps) |
-| **Ctrl + ↑ / ↓** or **+ / −** | Resize the selected image |
-| **Ctrl + ← / →** or **[ ]** | Rotate the selected image |
-| **Ctrl + D** / **Delete** | Duplicate / remove the selected image |
-| **Esc** | Deselect the image, close a menu, or stop picking parts |
+| Arrows | Move the selected sticker (hold **Shift** for bigger steps) |
+| **Ctrl + ↑ / ↓** or **+ / −** | Resize the selected sticker |
+| **Ctrl + ← / →** or **[ ]** | Rotate the selected sticker |
+| **Ctrl + D** / **Delete** | Duplicate / remove the selected sticker |
+| **Esc** | Deselect the sticker, close a menu, or stop picking parts |
 | Right-click a part | Its color menu (on the model, in All parts, or in the palette) |
 
 ## Good to know
