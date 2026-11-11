@@ -2,7 +2,7 @@
 
 Paint your Polybar Micro, Mini or Max, then get a print-ready Bambu Studio project for your Bambu Lab printer.
 
-[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.22.1-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
+[![Download for Windows](https://img.shields.io/badge/Download_for_Windows-Polybar_Studio_0.22.2-0078D4?style=for-the-badge&logo=windows)](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases/latest/download/Polybar-Studio-Windows.exe)
 
 Windows 10 or 11, 64-bit · about 50 MB · works offline · [all releases](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Release/releases) · share your designs in the [Polybar Discord](https://discord.gg/wBRdgxEGhe)
 
@@ -57,7 +57,7 @@ Drag in the preview to rotate, scroll to zoom (it zooms toward the mouse pointer
 - **Add shape** adds a circle, ring, square, triangle, diamond, hexagon, star, burst, heart, lightning bolt, arrow or music note. **Add text** adds text: type it under the selected layer and pick a font and Bold. Shapes and text are one color: recolor them with their color dot.
 - **Background › Remove** takes out a solid background around a logo. Raise **Tolerance** if some background stays.
 - A one-color sticker (a typical logo) gets a small **color dot** in its row under **Layers**: click it to recolor the whole sticker.
-- **The back of the guitar:** turn the model to the back (**Back**, or drag it around) and add a sticker, shape or text: it goes on the back, and the view stays there while you place it. Any selected layer has a **Front / Back** switch, and back layers show **Back** in the Layers list. Back art prints on the surfaces you see from behind (back plates, wings, bottom housings, the headstock's back) and shares the palette with the front. Clear parts and parts in a color of their own stay as they are. **Fix thin lines** and **Print preview** work on the front only for now, and versions before 0.22.0 draw back layers on the front.
+- **The back of the guitar:** turn the model to the back (**Back**, or drag it around) and add a sticker, shape or text: it goes on the back, and the view stays there while you place it. Any selected layer has a **Front / Back** switch, and back layers show **Back** in the Layers list. Back art prints on the surfaces you see from behind (back plates, wings, bottom housings, the headstock's back) and shares the palette with the front. Clear parts stay as they are; a part in a color of its own shows that color around your back stickers. **Fix thin lines** and **Print preview** work on the front only for now, and versions before 0.22.0 draw back layers on the front.
 - **Sticker Inventory** (in the Artwork card) keeps stickers on this computer to use again. **New Sticker…** takes a picture through its steps: remove the background (with a tolerance), crop (drag the frame, or **Trim to Sticker**), brightness and contrast, then **Save Sticker** or **Save and Add**. In the list, **Add** puts one on the guitar, **Edit** changes it, ✎ renames it, and **Delete** asks twice. **Save to Inventory** (under a selected layer) keeps any sticker, shape or text from your design. The inventory isn't part of design files.
 - **Name your design:** click the title above the preview (for example "Mini / Plain") and type. The name is used for the export files.
 - No sticker? Open **Background Patterns** for Waves, Checkers, Voltage or Orbit. **Keep Pattern Behind Stickers** puts a pattern under your stickers.
@@ -224,6 +224,8 @@ In the slicer, pick your actual filament profiles, check that each color goes to
 ## Releases
 
 Each release lists the installer's SHA-256 and the [Development](https://github.com/3D-Printed-Controller-Systems/Polybar-Studio-Development) commit it was built from.
+
+**0.22.2**: stickers and text on the back now show on parts you gave a color of their own (like white back plates); before, they showed only on the neck.
 
 **0.22.1**: grabbing stickers is easier: the view keeps its zoom when you pick one, stickers on painted color chips with their own color can be picked, the selection box sits right on the sticker with visible handles, and a click anywhere in the box keeps it.
 
